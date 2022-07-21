@@ -53,4 +53,13 @@ public class Teacher extends Person{
     public List<Klass> getClasses() {
         return classes;
     }
+
+
+    public void printStuJoin(int classNumber,Student stu){
+        System.out.printf("I am %s. I know %s has joined Class %d.\n",this.getName(),stu.getName(),classNumber);
+    }
+
+    public void printStuLeader(int classNumber,Student stu){
+        System.out.printf("I am %s. I know %s become Leader of Class %d.\n",this.getName(),stu.getName(),classNumber);
+    }
 }

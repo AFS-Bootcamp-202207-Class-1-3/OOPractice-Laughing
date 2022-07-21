@@ -13,12 +13,12 @@ public class Watcher {
     public static void notifyTeacherStudentJoin(int classNumber,Student stu){
         if(!mapToTeacher.containsKey(classNumber)) return;
         Teacher teacher=mapToTeacher.get(classNumber);
-        System.out.printf("I am %s. I know %s has joined Class %d.\n",teacher.getName(),stu.getName(),classNumber);
+        teacher.printStuJoin(classNumber,stu);
     }
 
     public static void notifyTeacherStudentLeader(int classNumber,Student stu){
         if(!mapToTeacher.containsKey(classNumber)) return;
         Teacher teacher=mapToTeacher.get(classNumber);
-        System.out.printf("I am %s. I know %s become Leader of Class %d.\n",teacher.getName(),stu.getName(),classNumber);
+        teacher.printStuLeader(classNumber, stu);
     }
 }
